@@ -1,0 +1,8 @@
+{
+    "name": "widemorph/ims-category-bundle",
+    "autoload": {
+        "psr-4": {
+            "WideMorph\\Ims\\Bundle\\ImsCategoryBundle\\": ""
+        }
+    }
+}

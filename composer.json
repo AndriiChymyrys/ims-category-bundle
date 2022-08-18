@@ -4,5 +4,8 @@
         "psr-4": {
             "WideMorph\\Ims\\Bundle\\ImsCategoryBundle\\": ""
         }
+    },
+    "require": {
+        "widemorph/ims-product-bundle": "@dev"
     }
 }

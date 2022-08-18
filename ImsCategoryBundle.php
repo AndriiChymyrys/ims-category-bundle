@@ -9,6 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Infrastructure\DependencyInjection\ImsCategoryExtension;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Infrastructure\DependencyInjection\Compiler\SideBarLinkCompilerPass;
+use WideMorph\Ims\Bundle\ImsCategoryBundle\Infrastructure\DependencyInjection\Compiler\MorphExternalConfigPass;
 
 /**
  * Class ImsCategoryBundle
@@ -23,6 +24,7 @@ class ImsCategoryBundle extends Bundle
     public function build(ContainerBuilder $container): void
     {
         $container->addCompilerPass(new SideBarLinkCompilerPass());
+        $container->addCompilerPass(new MorphExternalConfigPass());
     }
 
     /**

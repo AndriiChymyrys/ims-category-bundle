@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\DomainInteraction">
+            <argument type="service" key="$createProductFormEventHandler"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandlerInterface"/>
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\DomainInteractionInterface"
+                 alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\DomainInteraction">
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteraction">
+            <argument type="service"
+                      key="$domainInteraction"
+                      id="WideMorph\Morph\Bundle\MorphCoreBundle\Interaction\DomainInteractionInterface"/>
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteractionInterface"
+                 alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteraction"/>
+    </services>
+</container>

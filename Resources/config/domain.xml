@@ -4,4 +4,21 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <services>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Block\ProductList\ProductListColumnNameBlock"
+                 autoconfigure="true">
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Block\ProductList\ProductListColumnDataBlock"
+                 autoconfigure="true">
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandler">
+            <argument type="service"
+                      key="$morphCoreInteraction"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteractionInterface"/>
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandlerInterface"
+                 alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandler">
+        </service>
+    </services>
 </container>

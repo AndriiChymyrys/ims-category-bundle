@@ -7,5 +7,12 @@
     <route id="ims_category_list" path="/" methods="GET"
            controller="WideMorph\Ims\Bundle\ImsCategoryBundle\Presentation\Controller\IndexController::index">
     </route>
+    <route id="ims_category_create" path="/create" methods="GET|POST"
+           controller="WideMorph\Ims\Bundle\ImsCategoryBundle\Presentation\Controller\IndexController::create">
+    </route>
+    <route id="ims_category_delete" path="/delete/{id}" methods="GET"
+           controller="WideMorph\Ims\Bundle\ImsCategoryBundle\Presentation\Controller\IndexController::delete">
+        <requirement key="id">\d+</requirement>
+    </route>
 
 </routes>

@@ -20,5 +20,43 @@
         <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandlerInterface"
                  alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Handler\CreateProductFormEventHandler">
         </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource\SelectCategoryDataSource"
+                 autoconfigure="true">
+            <argument type="service" key="$entityManager"
+                      id="Doctrine\ORM\EntityManagerInterface"/>
+            <argument type="service" key="$morphCoreInteraction"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteractionInterface"/>
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource\CreateCategoryDataSource"
+                 autoconfigure="true">
+            <argument type="service" key="$createCategoryService"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\CreateCategoryServiceInterface"/>
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource\DeleteCategoryDataSource"
+                 autoconfigure="true">
+            <argument type="service" key="$deleteCategoryService"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\DeleteCategoryServiceInterface"/>
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\CreateCategoryService">
+            <argument type="service" key="$entityManager"
+                      id="Doctrine\ORM\EntityManagerInterface"/>
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\CreateCategoryServiceInterface"
+                 alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\CreateCategoryService">
+        </service>
+
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\DeleteCategoryService">
+            <argument type="service" key="$entityManager"
+                      id="Doctrine\ORM\EntityManagerInterface"/>
+            <argument type="service" key="$morphCoreInteraction"
+                      id="WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteractionInterface"/>
+        </service>
+        <service id="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\DeleteCategoryServiceInterface"
+                 alias="WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\DeleteCategoryService">
+        </service>
     </services>
 </container>

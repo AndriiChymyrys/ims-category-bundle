@@ -3,5 +3,49 @@
 {% pcvarset('page_title', 'Category') %}
 
 {% block page_content %}
-    Category
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <a href="{{ path('category_ims_category_create') }}" class="btn btn-info">Create</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Category Table</h3>
+                </div>
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for category in output.sourceData %}
+                            <tr>
+                                <td>{{ category.id }}</td>
+                                <td>{{ category.name }}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="{{ path('category_ims_category_delete', {'id': category.id}) }}" class="btn btn-danger">Del</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer clearfix">
+                    {{ knp_pagination_render(output.sourceData) }}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock page_content %}

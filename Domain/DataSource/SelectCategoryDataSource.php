@@ -7,7 +7,7 @@ namespace WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource;
 use Doctrine\ORM\EntityManagerInterface;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\MorphCoreInteractionInterface;
 use WideMorph\Morph\Bundle\MorphCoreBundle\Domain\Services\Input\InputDataCollectionInterface;
-use WideMorph\Morph\Bundle\MorphCoreBundle\Domain\Services\Contracts\SelectDataSourceInterface;
+use WideMorph\Morph\Bundle\MorphCoreBundle\Interaction\Contract\DataSource\SelectDataSourceInterface;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\Bridge\MorphCore\SelectDataSourceDefinitionInterfaceBridge;
 
 /**

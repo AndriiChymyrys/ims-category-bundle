@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource;
 
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\DeleteCategoryServiceInterface;
-use WideMorph\Morph\Bundle\MorphCoreBundle\Domain\Services\Contracts\DeleteDataSourceInterface;
+use WideMorph\Morph\Bundle\MorphCoreBundle\Interaction\Contract\DataSource\DeleteDataSourceInterface;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\Bridge\MorphCore\DeleteDataSourceDefinitionInterfaceBridge;
 
 /**

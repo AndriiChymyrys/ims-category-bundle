@@ -6,7 +6,7 @@ namespace WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\DataSource;
 
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Presentation\Form\Type\CreateCategoryFormType;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Domain\Service\CreateCategoryServiceInterface;
-use WideMorph\Morph\Bundle\MorphCoreBundle\Domain\Services\Contracts\CreateDataSourceInterface;
+use WideMorph\Morph\Bundle\MorphCoreBundle\Interaction\Contract\DataSource\CreateDataSourceInterface;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\Bridge\MorphCore\FormDataSourceDefinitionInterfaceBridge;
 use WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\Bridge\MorphCore\CreateDataSourceDefinitionInterfaceBridge;
 

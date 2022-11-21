@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace WideMorph\Ims\Bundle\ImsCategoryBundle\Interaction\Bridge\MorphView;
 
-use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\AbstractBlock;
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\AbstractBlock;
 
 /**
  * Class AbstractBlockBridge
